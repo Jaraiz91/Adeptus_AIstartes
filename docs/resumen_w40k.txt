@@ -1,0 +1,26 @@
+**Resumen Completo de las Reglas de Warhammer 40K:**
+
+Warhammer 40,000, abreviado frecuentemente como Warhammer 40K, es un juego de estrategia en miniatura en el que los jugadores actúan como comandantes de ejércitos futuristas, expresando su maestría táctica en intensas batallas sobre un campo de juego prediseñado. Ambientado en un oscuro futuro donde la guerra intergaláctica es omnipresente, el objetivo primordial es completar con éxito misiones específicas o derrotar al oponente, acumulando la mayor cantidad de puntos de victoria. Con sus ejércitos representados por complejas miniaturas Citadel, los jugadores deben navegar a través de fases de turno bien definidas que simulan el dinamismo de la táctica militar en un entorno futurista.
+
+### Fases del Turno:
+
+1. **Fase de Movimiento**:
+   La fase de movimiento es esencial para establecer las futuras posiciones tácticas. Cada jugador tiene la oportunidad de reposicionar sus unidades, respetando el atributo de movimiento de cada miniatura, medido en pulgadas. Las unidades pueden realizar movimientos normales, avances para cubrir más terreno o permanecer inmóviles si así lo desean. Las miniaturas deben maniobrar alrededor de otras, sin atravesar al enemigo, a menos que sean del tipo volador –estas tienen la ventaja adicional de volar sobre todo tipo de obstáculos y unidades. Estrategias como el despliegue de unidades de reserva y el uso prudente de terrenos elevados para mejorar la línea de visión, también son centrales en esta fase.
+
+2. **Fase de Disparo**:
+   Durante la fase de disparo, las unidades que no hayan avanzado ni retrocedido pueden utilizar sus armamento a distancia para atacar a los enemigos visibles y al alcance. La capacidad de obtener líneas claras de visión es crucial, y el terreno provee beneficios defensivos, como coberturas que aumentan las probabilidades de supervivencia al recibir un ataque. Los jugadores deben realizar elecciones tácticas al asignar objetivos, teniendo en cuenta las habilidades únicas de sus armas, como el disparo rápido o la capacidad de penetrar armaduras. Estos factores se resuelven mediante tiradas de dados que consideran tanto la habilidad inherente de la unidad como las circunstancias del ataque.
+
+3. **Fase de Carga**:
+   La fase de carga es la antesala del enfrentamiento cuerpo a cuerpo. Las unidades designadas para cargar deben encontrarse a una distancia de hasta 12 pulgadas de sus objetivos, y los jugadores deben lanzar un par de dados (2D6) para determinar si logran la carga deseada. Las unidades que consiguen superar los obstáculos que presenta el terreno, o que son capaces de realizar intervenciones heroicas, pueden desequilibrar la balanza a su favor, alcanzando posiciones ventajosas o sorprendiendo al enemigo en posiciones vulnerables. La coherencia dentro de un grupo de carga también proporciona la oportunidad de asestar el primer golpe en la fase de combate.
+
+4. **Fase de Combate**:
+   En esta fase crítica, las unidades comprometidas en combate cuerpo a cuerpo intercambian golpes. Los jugadores resuelven ataques basados en el orden de los enfrentamientos, empezando generalmente con las unidades que cargaron con éxito. Estas unidades obtienen prioridad, pudiendo golpear antes que las demás. Las habilidades del arma, la fuerza relativa y la resistencia del oponente determinan el impacto y el daño potencial de cada ataque, mientras que las miniaturas también pueden utilizar tácticas como el consolidarse para prepararse para futuras batallas. El uso de habilidades especiales y la correcta valoración de riesgos en combate se convierten en elementos decisivos.
+
+5. **Fase de Moral**:
+   Después del caos del combate, cada unidad que ha sufrido bajas realiza un chequeo de moral usando una tirada de 2D6 sumada al número de bajas. Si el resultado supera el atributo de liderazgo de la unidad, miniaturas adicionales pueden abandonar el campo, simulando la pérdida de cohesión y moral. Estratagemas y habilidades de aura que previenen o mitigan deserciones son vitales para mantener la integridad de la fuerza de combate hacia las fases finales de la partida.
+
+**Estructura y Desarrollo del Juego:**
+
+La estructura del campo de batalla, conjuntamente con las reglas de despliegue, son fundamentales para calibrar el equilibrio estratégico del juego. Diferentes misiones y modos de juego establecen un marco para el cumplimiento de objetivos, como el control de áreas y la eliminación de amenazas específicas. Al concluir la partida, el conteo de puntos de victoria determina al ganador, reconociendo al jugador cuya estrategia y ejecución durante las fases del turno consolidaron su supremacía en el campo de batalla.
+
+En resumen, Warhammer 40K es un juego de estrategia profundo y envolvente, donde la comprensión y el aprovechamiento de las normas fundamentales y complejas otorgan la ventaja competitiva necesaria, creando una experiencia de juego rica y desafiante tanto en estrategia como en ejecución.

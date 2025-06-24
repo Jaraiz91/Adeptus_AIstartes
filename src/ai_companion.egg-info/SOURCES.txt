@@ -1,0 +1,6 @@
+pyproject.toml
+src/ai_companion.egg-info/PKG-INFO
+src/ai_companion.egg-info/SOURCES.txt
+src/ai_companion.egg-info/dependency_links.txt
+src/ai_companion.egg-info/requires.txt
+src/ai_companion.egg-info/top_level.txt
