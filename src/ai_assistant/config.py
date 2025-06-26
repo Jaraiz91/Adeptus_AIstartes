@@ -27,7 +27,8 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: str
 
     # --- Chroma Configuration ---
-    CHROMA_DB_PATH = './docs/vectordb/'
+    CHROMA_DB_PATH: str = './docs/vectordb/'
+    RULES_SUMMARY_PATH: str = './docs/resumen_w40k.txt'
 
     # --- Short memory configuration ---
     ROUTER_MESSAGES_TO_ANALYZE: int = 3

@@ -10,4 +10,5 @@ def router_node(state: AdeptusAssistantState):
     return {'workflow': response.workflow, 'tipo_pregunta': response.tipo_pregunta}
 
 
-def answer_node(state: AdeptusAssistantState):
+def text_node(state: AdeptusAssistantState):
+    pass
