@@ -14,3 +14,5 @@ class AdeptusAssistantState(MessagesState):
     workflow: str
     audio_buffer: bytes
     summary: str
+    tipo_pregunta: str
+    

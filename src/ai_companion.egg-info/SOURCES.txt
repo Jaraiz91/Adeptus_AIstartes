@@ -1,4 +1,16 @@
+LICENSE
+README.md
 pyproject.toml
+src/config.py
+src/ai_assistant/__init__.py
+src/ai_assistant/core/__init__.py
+src/ai_assistant/core/chains.py
+src/ai_assistant/core/outputs.py
+src/ai_assistant/core/prompts.py
+src/ai_assistant/graph/edges.py
+src/ai_assistant/graph/graph.py
+src/ai_assistant/graph/nodes.py
+src/ai_assistant/graph/state.py
 src/ai_companion.egg-info/PKG-INFO
 src/ai_companion.egg-info/SOURCES.txt
 src/ai_companion.egg-info/dependency_links.txt
