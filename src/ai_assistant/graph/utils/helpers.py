@@ -8,3 +8,4 @@ def get_chat_model(temperature: float = 0.7):
             model=settings.GROQ_LLM_MODEL,
             temperature=temperature
     )
+

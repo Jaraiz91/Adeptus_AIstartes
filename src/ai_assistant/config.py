@@ -12,6 +12,10 @@ class Settings(BaseSettings):
     GROQ_API_KEY: str
     GROQ_LLM_MODEL: str = "llama-3.3-70b-versatile"
     GROQ_SUMMARY_LLM_MODEL :str = "gemma2-9b-it"
+
+    ELEVENLABS_API_KEY: str
+    ELEVENLABS_VOICE_ID: str
+    TOGETHER_API_KEY: str
     
     # --- Audio settings ---
     STT_MODEL_NAME: str = "whisper-large-v3-turbo"
