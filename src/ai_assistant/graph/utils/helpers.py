@@ -3,7 +3,13 @@ from ai_assistant.config import settings
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 
-
+async def retrieve_docs(retriever, question):
+    retrieved_docs = retriever.ainvoke(question)
+    context = ''
+    for d in retrieved_docs:
+        context += "\n\n"
+        context += d.page_content
+    return context
 
 def get_chat_model(temperature: float = 0.7):
     return ChatGroq(
@@ -12,11 +18,25 @@ def get_chat_model(temperature: float = 0.7):
             temperature=temperature
     )
 
-def get_context(question_type):
+async def get_context(question_type, question):
     if question_type == 'General':
         file =  open(settings.RULES_SUMMARY_PATH, 'r') 
         context = file.read()
     elif question_type == 'Especifica':
-        context = 'hola'
+        embedding_model = HuggingFaceEmbeddings(model=settings.RAG_TEXT_EMBEDDING_MODEL_ID)
+        retriever = Chroma(
+            embedding_function=embedding_model,
+            persist_directory=settings.CHROMA_DB_PATH
+        ).as_retriever(search_type='mmr', search_kwargs = {'k': 8})
+        context = await retrieve_docs(retriever=retriever, question=question)
+
+    else:
+        context = ''
+
+    return context
+
+
+
+
 
 
