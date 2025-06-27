@@ -2,6 +2,7 @@ from langchain_groq import ChatGroq
 from ai_assistant.config import settings
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
+from ai_assistant.modules.speech.text_to_speech import TextToSpeech
 
 async def retrieve_docs(retriever, question):
     retrieved_docs = retriever.ainvoke(question)
@@ -36,7 +37,8 @@ async def get_context(question_type, question):
     return context
 
 
-
+def get_text_to_speech():
+    return TextToSpeech()
 
 
 
