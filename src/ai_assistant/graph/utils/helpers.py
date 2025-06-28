@@ -19,6 +19,13 @@ def get_chat_model(temperature: float = 0.7):
             temperature=temperature
     )
 
+def get_summary_model():
+    return ChatGroq(
+        api_key=settings.GROQ_API_KEY,
+        model=settings.GROQ_SUMMARY_LLM_MODEL,
+        temperature=0.5
+    )
+
 async def get_context(question_type, question):
     if question_type == 'General':
         file =  open(settings.RULES_SUMMARY_PATH, 'r') 
