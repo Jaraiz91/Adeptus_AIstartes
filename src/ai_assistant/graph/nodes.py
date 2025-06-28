@@ -5,7 +5,7 @@ from langchain_core.runnables import RunnableConfig
 
 from ai_assistant.graph.state import AdeptusAssistantState
 from ai_assistant.graph.utils.chains import get_router_chain, get_conversation_chain
-from ai_assistant.graph.utils.helpers import get_context , get_summary_model
+from ai_assistant.graph.utils.helpers import get_context , get_summary_model, get_text_to_speech
 from ai_assistant.config import settings
 
 async def router_node(state: AdeptusAssistantState):
@@ -50,5 +50,18 @@ async def summarize_conversation_node(state: AdeptusAssistantState):
     return {'summary': response.content, 'messages': delete_messages}
 
 
-async def audio_node(state: AdeptusAssistantState):
-    pass
+async def audio_node(state: AdeptusAssistantState, config: RunnableConfig):
+    conversation_chain = get_conversation_chain(summary=state['summary'])
+    context = await get_context(question_type=state['tipo_pregunta'],question=state['pregunta'])
+    text_to_speech_module = get_text_to_speech()
+
+    response = await chain.aivoke(
+        {
+            'messages': state['messages'],
+            'context': context
+        },
+        config
+    )
+    output_audio = await text_to_speech_module.synthesize(response)
+
+    return {'messages': response, 'audio_buffer': output_audio}
