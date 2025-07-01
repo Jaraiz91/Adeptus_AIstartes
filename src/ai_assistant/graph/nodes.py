@@ -10,7 +10,7 @@ from ai_assistant.config import settings
 
 async def router_node(state: AdeptusAssistantState):
     router_chain = get_router_chain()
-    response = await router_chain.ainvoke(messages= state['messages'])
+    response = await router_chain.ainvoke({"messages": state['messages']})
     return {'workflow': response.workflow, 'tipo_pregunta': response.tipo_pregunta, 'pregunta': response.pregunta}
 
 
@@ -23,14 +23,14 @@ async def text_node(state: AdeptusAssistantState, config: RunnableConfig):
     },
     config=config
     )
-    return {"messages": AIMessage(content=response)}
+    return {"messages": AIMessage(content=response.content)}
 
 
 async def summarize_conversation_node(state: AdeptusAssistantState):
     model = get_summary_model()
     summary = state.get("summary", "")
 
-    if summay:
+    if summary:
         summary_message = (
             f"Este es el resumen de la conversación hasta ahora con el usuario: {summary}\n\n"
             "Extiende el resumen teniendo en cuenta los nuevos mensajes de arriba:"

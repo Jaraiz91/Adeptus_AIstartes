@@ -10,7 +10,7 @@ from ai_assistant.core.outputs import router_atrtibutes
 
 
 def get_router_chain():
-    model = get_chat_model()
+    model = get_chat_model().with_structured_output(router_atrtibutes)
     prompt = ChatPromptTemplate.from_messages(
         [
             ("system", ROUTER_PROMPT),
