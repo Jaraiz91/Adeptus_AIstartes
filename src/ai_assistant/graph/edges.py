@@ -14,11 +14,11 @@ def should_summarize_conversation(state: AdeptusAssistantState) -> Literal["summ
         return END
     
     
-def select_workflow(state: AdeptusAssistantState) -> Literal['conversation_node', 'audio_node']:
+def select_workflow(state: AdeptusAssistantState) -> Literal['text_node', 'audio_node']:
     workflow = state['workflow']
 
     if workflow == 'audio':
         return 'audio_node'
     else:
-        return 'conversation_node'
+        return 'text_node'
     
