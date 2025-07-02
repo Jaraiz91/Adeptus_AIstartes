@@ -34,7 +34,7 @@ def create_graph():
 
     return builder
 
-graph = builder.compile(checkpointer=memory)
+graph = create_graph().compile(checkpointer=memory)
 
 
 
