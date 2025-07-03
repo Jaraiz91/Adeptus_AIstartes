@@ -55,7 +55,7 @@ async def audio_node(state: AdeptusAssistantState, config: RunnableConfig):
     context = await get_context(question_type=state['tipo_pregunta'],question=state['pregunta'])
     text_to_speech_module = get_text_to_speech()
 
-    response = await chain.aivoke(
+    response = await conversation_chain.ainvoke(
         {
             'messages': state['messages'],
             'context': context
