@@ -33,6 +33,8 @@ async def whatsapp_handler(request: Request) -> Response:
 
     if request.method == "GET":
         params = request.query_params
+        expected_token = os.getenv("WHATSAPP_VERIFY_TOKEN")
+        print(f"Expected token: {expected_token}")
         if params.get("hub.verify_token") == os.getenv("WHATSAPP_VERIFY_TOKEN"):
             return Response(content=params.get("hub.challenge"), status_code=200)
         return Response(content="Verification token mismatch", status_code=403)

@@ -15,11 +15,12 @@ async def router_node(state: AdeptusAssistantState):
 
 
 async def text_node(state: AdeptusAssistantState, config: RunnableConfig):
-    conversation_chain = get_conversation_chain(summary=state['summary'])
+    summary = state.get("summary", "")
+    conversation_chain = get_conversation_chain(summary=summary)
     context = await get_context(question_type=state['tipo_pregunta'],question=state['pregunta'])
-    response = conversation_chain.ainvoke({
+    response = await conversation_chain.ainvoke({
         "messages": state['messages'],
-        "contexto": context
+        "context": context
     },
     config=config
     )

@@ -5,7 +5,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from ai_assistant.modules.speech.text_to_speech import TextToSpeech
 
 async def retrieve_docs(retriever, question):
-    retrieved_docs = retriever.ainvoke(question)
+    retrieved_docs = await retriever.ainvoke(question)
     context = ''
     for d in retrieved_docs:
         context += "\n\n"

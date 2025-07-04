@@ -16,6 +16,10 @@ RUN apt-get update && apt-get install -y \
 # Copy the dependency management files (lock file and pyproject.toml) first
 COPY uv.lock pyproject.toml README.md /app/
 
+#COPY .env /app/.env
+
+COPY docs/ /app/docs/
+
 # Install the application dependencies
 RUN uv sync --frozen --no-cache
 

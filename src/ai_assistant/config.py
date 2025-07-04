@@ -15,7 +15,6 @@ class Settings(BaseSettings):
 
     ELEVENLABS_API_KEY: str
     ELEVENLABS_VOICE_ID: str
-    TOGETHER_API_KEY: str
     
     # --- Audio settings ---
     STT_MODEL_NAME: str = "whisper-large-v3-turbo"
@@ -23,8 +22,7 @@ class Settings(BaseSettings):
     TTI_MODEL_NAME: str = "black-forest-labs/FLUX.1-schnell-Free"
     ITT_MODEL_NAME: str = "llama-3.2-90b-vision-preview"
     
-    # --- OpenAI Configuration (Required for evaluation) ---
-    OPENAI_API_KEY: str
+
 
     # --- Chroma Configuration ---
     CHROMA_DB_PATH: str = 'app/docs/vectordb/'
