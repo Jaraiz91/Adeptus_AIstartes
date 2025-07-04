@@ -52,7 +52,8 @@ async def summarize_conversation_node(state: AdeptusAssistantState):
 
 
 async def audio_node(state: AdeptusAssistantState, config: RunnableConfig):
-    conversation_chain = get_conversation_chain(summary=state['summary'])
+    summary = state.get("summary", "")
+    conversation_chain = get_conversation_chain(summary=summary)
     context = await get_context(question_type=state['tipo_pregunta'],question=state['pregunta'])
     text_to_speech_module = get_text_to_speech()
 
