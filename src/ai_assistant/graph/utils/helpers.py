@@ -1,4 +1,5 @@
 from langchain_groq import ChatGroq
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from ai_assistant.config import settings
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -13,10 +14,15 @@ async def retrieve_docs(retriever, question):
     return context
 
 def get_chat_model(temperature: float = 0.7):
-    return ChatGroq(
-            api_key=settings.GROQ_API_KEY,
-            model=settings.GROQ_LLM_MODEL,
-            temperature=temperature
+    #return ChatGroq(
+    #        api_key=settings.GROQ_API_KEY,
+    #        model=settings.GROQ_LLM_MODEL,
+    #        temperature=temperature
+    #)
+    return ChatOpenAI(
+        api_key=settings.OPENAI_API_KEY,
+        model="gpt-4o-mini-2024-07-18",
+        temperature=temperature
     )
 
 def get_summary_model():
@@ -31,7 +37,11 @@ async def get_context(question_type, question):
         file =  open(settings.RULES_SUMMARY_PATH, 'r') 
         context = file.read()
     elif question_type == 'Especifica':
-        embedding_model = HuggingFaceEmbeddings(model=settings.RAG_TEXT_EMBEDDING_MODEL_ID)
+        model_kwargs = {
+            "use_auth_token": settings.HUGGINGFACE_API_KEY
+        }
+        #embedding_model = HuggingFaceEmbeddings(model=settings.RAG_TEXT_EMBEDDING_MODEL_ID, model_kwargs= model_kwargs)
+        embedding_model = OpenAIEmbeddings(model=settings.OPENAI_EMBEDDING_MODEL)
         retriever = Chroma(
             embedding_function=embedding_model,
             persist_directory=settings.CHROMA_DB_PATH

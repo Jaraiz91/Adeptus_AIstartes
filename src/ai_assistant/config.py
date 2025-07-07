@@ -13,6 +13,11 @@ class Settings(BaseSettings):
     GROQ_LLM_MODEL: str = "llama-3.3-70b-versatile"
     GROQ_SUMMARY_LLM_MODEL :str = "gemma2-9b-it"
 
+    OPENAI_API_KEY :str
+    OPENAI_EMBEDDING_MODEL :str = "text-embedding-3-small"
+
+    HUGGINGFACE_API_KEY: str
+
     ELEVENLABS_API_KEY: str
     ELEVENLABS_VOICE_ID: str
     

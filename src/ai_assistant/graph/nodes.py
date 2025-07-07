@@ -64,6 +64,6 @@ async def audio_node(state: AdeptusAssistantState, config: RunnableConfig):
         },
         config
     )
-    output_audio = await text_to_speech_module.synthesize(response)
+    output_audio = await text_to_speech_module.synthesize(str(response.content))
 
     return {'messages': response, 'audio_buffer': output_audio}
